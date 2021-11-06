@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import './App.scss';
 import apiService from '../../utils/apiService'
 
 
@@ -34,8 +34,10 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      {output}
+    <div id="App">
+      <div id="content-container">
+        {output}
+      </div>
     </div>
   );
 }
