@@ -67,6 +67,10 @@ function App() {
     "cod": 200
   }
 
+  function getZipcode (zip) {
+    console.log(zip);
+  }
+
   async function getCurrent () {
     try {
       //let data = await apiService.getCurrent(location);
@@ -88,7 +92,7 @@ function App() {
   return (
     <div id="App">
       <header>
-        <MainHeader />
+        <MainHeader getZipcode={getZipcode} />
       </header>
       <div id="content-container">
         {output}

@@ -1,12 +1,13 @@
 @import "../../sass/colors";
 @import "../../sass/fonts";
+@import "../../sass/dimensions";
 
 #mainheader-container {
   width: 100%;
-  height: 90px;
+  height: $main-header-height;
   background-color: $color-primary;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   padding: 20px;
@@ -20,9 +21,14 @@
   color: $color-font-light;
   font-size: $font-small;
   font-family: $font-primary;
+  font-weight: $font-heavy-weight;
 }
 
 @media (min-width: 800px) {
+  #mainheader-container {
+    justify-content: center;
+  }
+
   #app-title {
     left: 40px;
     font-size: $font-medium;
