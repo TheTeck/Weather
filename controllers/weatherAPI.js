@@ -7,9 +7,9 @@ module.exports = {
 };
 
 function getCurrent (req, res) {
-    let location = "San Francisco";
+    console.log(req.params)
     request(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=51.5085&lon=37.7749&appid=${apiKey}&units=imperial`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${req.params.id}&appid=${apiKey}&units=imperial`,
         function(err, response, body) {
             let data = JSON.parse(body);
             res.send(data);

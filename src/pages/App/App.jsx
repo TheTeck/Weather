@@ -8,10 +8,12 @@ function App() {
   const [output, setOutput] = useState('nothing');
   const [allData, setAllData] = useState({});
 
+  let location = "Paris"
+
   async function getCurrent () {
-    let data = await apiService.getCurrent();
+    let data = await apiService.getCurrent(location);
     setAllData(data);
-    setOutput(data.current.temp);
+    setOutput(data.main.temp + "\u00B0");
   }
 
   useEffect(() => {
