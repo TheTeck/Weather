@@ -10,12 +10,12 @@
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  padding: 20px;
+  padding: 0 $padding-small;
 }
 
 #app-title {
   position: absolute;
-  left: 20px;
+  left: $padding-small;
   top: 50%;
   transform: translateY(-50%);
   color: $color-font-light;
@@ -24,20 +24,20 @@
   font-weight: $font-heavy-weight;
 }
 
-@media (min-width: 800px) {
+@media (min-width: $break-mid) {
   #mainheader-container {
     justify-content: center;
   }
 
   #app-title {
-    left: 40px;
+    left: $padding-medium;
     font-size: $font-medium;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: $break-large) {
   #app-title {
-    left: 90px;
+    left: $padding-large;
     font-size: $font-large;
   }
 }
