@@ -1,0 +1,37 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+#subheader-container {
+  width: 100%;
+  height: $sub-header-height;
+  background-color: $color-secondary;
+  padding: 0 $padding-small;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  color: $color-font-light;
+  font-family: $font-primary;
+  font-size: $font-tiny;
+}
+
+#subheader-name {
+  font-weight: $font-heavy-weight;
+}
+
+#subheader-icon {
+  width: $sub-header-height;
+  height: $sub-header-height;
+}
+
+@media (min-width: $break-mid) {
+  #subheader-container {
+    padding: 0 $padding-medium;
+  }
+}
+
+@media (min-width: $break-large) {
+  #subheader-container {
+    padding: 0 $padding-large;
+  }
+}

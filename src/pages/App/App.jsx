@@ -3,21 +3,9 @@ import React, {useState, useEffect} from 'react';
 import './App.scss';
 import apiService from '../../utils/apiService'
 import MainHeader from '../../components/MainHeader/MainHeader';
+import SubHeader from '../../components/SubHeader/SubHeader';
 
-
-function App() {
-
-  const [output, setOutput] = useState('nothing');
-  // Object returned by Current Weather API
-  const [currentData, setCurrentData] = useState({});
-  // Oject returned by One Call API
-  const [allData, setAllData] = useState({});
-  const [lat, setLat] = useState(null);
-  const [long, setLong] = useState(null);
-
-  let location = "94513"
-  let data = {
-
+let dummyData = {
     "coord": {
       "lon": -0.1257,
       "lat": 51.5085
@@ -67,14 +55,28 @@ function App() {
     "cod": 200
   }
 
+function App() {
+
+  const [output, setOutput] = useState('nothing');
+  // Object returned by Current Weather API
+  const [currentData, setCurrentData] = useState(dummyData);
+  // Oject returned by One Call API
+  const [allData, setAllData] = useState(dummyData);
+  const [lat, setLat] = useState(null);
+  const [long, setLong] = useState(null);
+
+  let location = "94513"
+  
+
   function getZipcode (zip) {
     console.log(zip);
   }
 
   async function getCurrent () {
     try {
-      //let data = await apiService.getCurrent(location);
-      setCurrentData(data);
+      /////let data = await apiService.getCurrent(location);
+      /////setCurrentData(data);
+      let data = dummyData;
       setLat(data.coord.lat);
       setLong(data.coord.lon);
 
@@ -93,6 +95,7 @@ function App() {
     <div id="App">
       <header>
         <MainHeader getZipcode={getZipcode} />
+        <SubHeader name={currentData.name} temp={currentData.main.temp} icon={currentData.weather[0].main} />
       </header>
       <div id="content-container">
         {output}
