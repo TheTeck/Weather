@@ -4,6 +4,7 @@ import './App.scss';
 import apiService from '../../utils/apiService'
 import MainHeader from '../../components/MainHeader/MainHeader';
 import SubHeader from '../../components/SubHeader/SubHeader';
+import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
 
 let dummyData = {
     "coord": {
@@ -98,7 +99,7 @@ function App() {
         <SubHeader name={currentData.name} temp={currentData.main.temp} icon={currentData.weather[0].main} />
       </header>
       <div id="content-container">
-        {output}
+        <CurrentWeather weather={currentData.weather[0]} main={currentData.main} name={currentData.name} />
       </div>
     </div>
   );
