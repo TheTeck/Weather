@@ -16,7 +16,7 @@ let dummyData = {
   
       {
         "id": 801,
-        "main": "Clouds",
+        "main": "Rain",
         "description": "few clouds",
         "icon": "02n"
       }
@@ -24,10 +24,10 @@ let dummyData = {
     "base": "stations",
   
     "main": {
-      "temp": 274.5,
+      "temp": 54.3,
       "feels_like": 271.66,
-      "temp_min": 272.21,
-      "temp_max": 277.06,
+      "temp_min": 51.2,
+      "temp_max": 63.2,
       "pressure": 1024,
       "humidity": 90
     },
@@ -52,7 +52,7 @@ let dummyData = {
     },
     "timezone": 0,
     "id": 2643743,
-    "name": "London",
+    "name": "Brentwood",
     "cod": 200
   }
 
@@ -65,6 +65,7 @@ function App() {
   const [allData, setAllData] = useState(dummyData);
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
+  const [day, setDay] = useState(true);
 
   let location = "94513"
   
@@ -96,10 +97,20 @@ function App() {
     <div id="App">
       <header>
         <MainHeader getZipcode={getZipcode} />
-        <SubHeader name={currentData.name} temp={currentData.main.temp} icon={currentData.weather[0].main} />
+        <SubHeader 
+          name={currentData.name} 
+          temp={currentData.main.temp}
+          weather={currentData.weather[0].main} 
+          day={day} 
+        />
       </header>
       <div id="content-container">
-        <CurrentWeather weather={currentData.weather[0]} main={currentData.main} name={currentData.name} />
+        <CurrentWeather 
+            weather={currentData.weather[0]} 
+            main={currentData.main} 
+            name={currentData.name} 
+            day={day}
+          />
       </div>
     </div>
   );
