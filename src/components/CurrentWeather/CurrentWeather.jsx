@@ -3,7 +3,7 @@ import React from 'react';
 import './CurrentWeather.scss';
 import DynamicIcon from '../DynamicIcon/DynamicIcon';
 
-export default function CurrentWeather ({ weather, main, name }) {
+export default function CurrentWeather ({ weather, main, name, day }) {
 
     let descriptionWords = weather.description.split(' ');
     let description = descriptionWords.map(word => {
@@ -18,7 +18,7 @@ export default function CurrentWeather ({ weather, main, name }) {
                 <p id="current-description">{description}</p>
             </div>
             <div id="current-right-data">
-                <DynamicIcon id="huge-icon" width={160} height={160} />
+                <DynamicIcon id="huge-icon" width={160} height={160} weather={weather.main} day={day} />
                 <p id="min-max-temp">{~~main.temp_min + '\u00B0/' + ~~main.temp_max + '\u00B0'}</p>
             </div>
         </div>
