@@ -7,6 +7,7 @@ import SubHeader from '../../components/SubHeader/SubHeader';
 import NavBar from '../../components/NavBar/NavBar';
 import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
 import TodayForecast from '../../components/TodayForecast/TodayForecast';
+import TodaysWeather from '../../components/TodaysWeather/TodaysWeather';
 
 let dummyData = require('../../dummyCurrent');
 let dummyWeekData = require('../../dummyWeek');
@@ -39,8 +40,8 @@ function App() {
 
   async function getCurrent () {
     try {
-      /////let data = await apiService.getCurrent(location);
-      let data = dummyData;
+      let data = await apiService.getCurrent(location);
+      /////let data = dummyData;
       setCurrentData(data);
 
     } catch (error) {
@@ -50,8 +51,8 @@ function App() {
 
   async function getWeek (latitude, longitude) {
     try {
-      /////let weekData = await apiService.getSevenDay(latitude, longitude);
-      let weekData = dummyWeekData;
+      let weekData = await apiService.getSevenDay(latitude, longitude);
+      /////let weekData = dummyWeekData;
       setAllData(weekData);
     } catch (error) {
       console.log(error.message);
@@ -91,6 +92,7 @@ function App() {
                   day={day}
               />
               <TodayForecast name={currentData.name} hourly={allData.hourly} />
+              <TodaysWeather name={currentData.name} weather={allData.current} timezoneOffset={allData.timezone_offset} />
             </>
           : <>Nothing Here Yet</>
         }
