@@ -6,6 +6,7 @@ import MainHeader from '../../components/MainHeader/MainHeader';
 import SubHeader from '../../components/SubHeader/SubHeader';
 import NavBar from '../../components/NavBar/NavBar';
 import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
+import TodayForecast from '../../components/TodayForecast/TodayForecast';
 
 let dummyData = require('../../dummyCurrent');
 let dummyWeekData = require('../../dummyWeek');
@@ -82,12 +83,15 @@ function App() {
       <div id="content-container">
         {
           active === 'Today' ?
-            <CurrentWeather 
-                weather={currentData.weather[0]} 
-                main={currentData.main} 
-                name={currentData.name} 
-                day={day}
-            />
+            <>
+              <CurrentWeather 
+                  weather={currentData.weather[0]} 
+                  main={currentData.main} 
+                  name={currentData.name} 
+                  day={day}
+              />
+              <TodayForecast name={currentData.name} hourly={allData.hourly} />
+            </>
           : <>Nothing Here Yet</>
         }
       </div>
