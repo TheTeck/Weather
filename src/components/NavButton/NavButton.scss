@@ -1,0 +1,31 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+.nav-button-container {
+  color: $color-font-light;
+  font-size: $font-small;
+  font-weight: $font-mid-weight;
+  background-color: transparent;
+
+  height: 100%;
+  padding: 0 $padding-small;
+  border-top: 2px solid $color-ternary;
+  border-bottom: 2px solid $color-ternary;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid $color-font-light;
+    outline: none;
+  }
+}
+
+.active-button {
+  border-bottom: 2px solid $color-font-light;
+}

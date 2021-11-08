@@ -4,6 +4,7 @@ import './App.scss';
 import apiService from '../../utils/apiService'
 import MainHeader from '../../components/MainHeader/MainHeader';
 import SubHeader from '../../components/SubHeader/SubHeader';
+import NavBar from '../../components/NavBar/NavBar';
 import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
 
 let dummyData = {
@@ -66,12 +67,22 @@ function App() {
   const [lat, setLat] = useState(null);
   const [long, setLong] = useState(null);
   const [day, setDay] = useState(true);
+  const [active, setActive] = useState('Today');
+
+
+  // Navigational options
+  const pages = ["Today", "Hourly", "7 Day"];
 
   let location = "94513"
   
-
+  // Retrieve zipcode from search bar
   function getZipcode (zip) {
     console.log(zip);
+  }
+
+  // Retrieve the new active page name from nav button click
+  function getActivePage (name) {
+    setActive(name);
   }
 
   async function getCurrent () {
@@ -104,13 +115,18 @@ function App() {
           day={day} 
         />
       </header>
+      <NavBar pages={pages} active={active} getActivePage={getActivePage} />
       <div id="content-container">
-        <CurrentWeather 
-            weather={currentData.weather[0]} 
-            main={currentData.main} 
-            name={currentData.name} 
-            day={day}
-          />
+        {
+          active === 'Today' ?
+            <CurrentWeather 
+                weather={currentData.weather[0]} 
+                main={currentData.main} 
+                name={currentData.name} 
+                day={day}
+            /> 
+          : <>Nothing Here Yet</>
+        }
       </div>
     </div>
   );

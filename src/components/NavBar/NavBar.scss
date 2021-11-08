@@ -1,0 +1,18 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+nav {
+  width: 100%;
+  height: $sub-header-height;
+  background-color: $color-ternary;
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+@media (min-width: $break-mid) {
+  nav {
+    column-gap: 200px;
+  }
+}
