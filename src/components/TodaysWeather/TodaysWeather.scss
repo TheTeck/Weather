@@ -1,0 +1,54 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+#todaysweather-container {
+  width: 100%;
+  max-width: $break-mid;
+  height: 320px;
+  margin: $padding-small auto 0 auto;
+  padding: $padding-small;
+  border-radius: $radius;
+  background-color: $color-muted-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: $font-primary;
+}
+
+#todaysweather-title {
+  width: 100%;
+  font-size: $font-small;
+  font-weight: $font-heavy-weight;
+  color: $color-font-dark;
+}
+
+.split-left-right {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#todays-temp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#actual-temp {
+  font-size: $font-giant;
+  line-height: $font-giant;
+  font-weight: $font-mid-weight;
+  opacity: 0.9;
+  margin: 0;
+}
+
+#feels-like-temp {
+  font-size: $font-small;
+  font-weight: $font-heavy-weight;
+  opacity: 0.6;
+  margin: 0;
+  line-height: $font-small;
+}

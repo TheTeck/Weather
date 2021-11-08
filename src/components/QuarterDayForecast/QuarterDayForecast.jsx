@@ -12,7 +12,7 @@ export default function QuarterDayForecast ({ title, hour, day }) {
             <DynamicIcon width={70} height={70} weather={hour.weather[0].main} day={day} />
             <div className="quarterday-precipitation">
                 <DynamicIcon width={25} height={25} weather={"Precipitation"} day={day} />
-                <p>{hour.pop}%</p>
+                <p>{~~hour.pop}%</p>
             </div>
         </div>
     )
