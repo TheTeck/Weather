@@ -9,6 +9,7 @@
   margin: 0 auto;
   padding: $padding-content;
   border-radius: $radius;
+  overflow: hidden;
   background: linear-gradient($color-primary, $color-ternary);
   display: flex;
   align-items: center;
@@ -37,21 +38,20 @@
   margin: 0;
   font-size: $font-small;
   font-weight: $font-mid-weight;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 #big-temp {
   font-size: $font-giant;
   font-weight: $font-heavy-weight;
   margin: 0;
-  opacity: 0.8;
 }
 
 #current-description {
   margin: 0;
   font-size: $font-medium;
   font-weight: $font-mid-weight;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 #huge-icon {
@@ -62,8 +62,8 @@
   margin: 0;
   font-size: $font-medium;
   font-weight: $font-mid-weight;
-  opacity: 0.7;
+  opacity: 0.8;
   text-align: center;
   position: relative;
-  top: -20px;
+  top: -10px;
 }
