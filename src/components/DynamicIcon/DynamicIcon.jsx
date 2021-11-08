@@ -2,12 +2,14 @@ import React from 'react';
 
 import './DynamicIcon.scss';
 
-export default function DynamicIcon ({ width, height, weather , day}) {
+export default function DynamicIcon ({ width, height, weather, day}) {
 
     let output = "sunny";
 
     // Determine the proper icon based on main weather and day/night state
-    if (weather === "Thunderstorm") {
+    if (weather === "Precipitation") {
+        output = "precipitation"
+    } else if (weather === "Thunderstorm") {
         output = "lightning";
     } else if (weather === "Snow") {
         output = "snow";
