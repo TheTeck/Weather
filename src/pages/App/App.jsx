@@ -7,55 +7,8 @@ import SubHeader from '../../components/SubHeader/SubHeader';
 import NavBar from '../../components/NavBar/NavBar';
 import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
 
-let dummyData = {
-    "coord": {
-      "lon": -0.1257,
-      "lat": 51.5085
-    },
-  
-    "weather": [
-  
-      {
-        "id": 801,
-        "main": "Rain",
-        "description": "few clouds",
-        "icon": "02n"
-      }
-    ],
-    "base": "stations",
-  
-    "main": {
-      "temp": 54.3,
-      "feels_like": 271.66,
-      "temp_min": 51.2,
-      "temp_max": 63.2,
-      "pressure": 1024,
-      "humidity": 90
-    },
-    "visibility": 10000,
-  
-    "wind": {
-      "speed": 2.57,
-      "deg": 200
-    },
-  
-    "clouds": {
-      "all": 12
-    },
-    "dt": 1636091095,
-  
-    "sys": {
-      "type": 2,
-      "id": 2019646,
-      "country": "GB",
-      "sunrise": 1636095672,
-      "sunset": 1636129618
-    },
-    "timezone": 0,
-    "id": 2643743,
-    "name": "Brentwood",
-    "cod": 200
-  }
+let dummyData = require('../../dummyCurrent');
+let dummyWeekData = require('../../dummyWeek');
 
 function App() {
 
@@ -63,15 +16,13 @@ function App() {
   // Object returned by Current Weather API
   const [currentData, setCurrentData] = useState(dummyData);
   // Oject returned by One Call API
-  const [allData, setAllData] = useState(dummyData);
-  const [lat, setLat] = useState(null);
-  const [long, setLong] = useState(null);
+  const [allData, setAllData] = useState(dummyWeekData);
   const [day, setDay] = useState(true);
   const [active, setActive] = useState('Today');
 
 
   // Navigational options
-  const pages = ["Today", "Hourly", "7 Day"];
+  const PAGES = ["Today", "Hourly", "7 Day"];
 
   let location = "94513"
   
@@ -88,21 +39,31 @@ function App() {
   async function getCurrent () {
     try {
       /////let data = await apiService.getCurrent(location);
-      /////setCurrentData(data);
       let data = dummyData;
-      setLat(data.coord.lat);
-      setLong(data.coord.lon);
+      setCurrentData(data);
 
-      // output is for testing
-      setOutput(`${data.name} ${data.main.temp}\u00B0`);
     } catch (error) {
-      setOutput(error.message);
+      console.log(error.message);
+    }
+  }
+
+  async function getWeek (latitude, longitude) {
+    try {
+      /////let weekData = await apiService.getSevenDay(latitude, longitude);
+      let weekData = dummyWeekData;
+      setAllData(weekData);
+    } catch (error) {
+      console.log(error.message);
     }
   }
 
   useEffect(() => {
     getCurrent();
   }, [])
+
+  useEffect(() => {
+    getWeek(currentData.coord.lat, currentData.coord.lon);
+  }, [currentData])
 
   return (
     <div id="App">
@@ -115,7 +76,9 @@ function App() {
           day={day} 
         />
       </header>
-      <NavBar pages={pages} active={active} getActivePage={getActivePage} />
+
+      <NavBar pages={PAGES} active={active} getActivePage={getActivePage} />
+
       <div id="content-container">
         {
           active === 'Today' ?
@@ -124,7 +87,7 @@ function App() {
                 main={currentData.main} 
                 name={currentData.name} 
                 day={day}
-            /> 
+            />
           : <>Nothing Here Yet</>
         }
       </div>
