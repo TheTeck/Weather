@@ -18,12 +18,12 @@ export default function TodaysWeather ({ name, weather, temp, timezoneOffset }) 
             <div className="flex-split">
                 <div className="todays-details">
                     <TodaysDetails 
-                        icon={<img src="icons/temp.png" />}
+                        icon={<div className="material-icons details-mat-icon">thermostat</div>}
                         description="High / Low"
                         data={`${~~temp.temp_max}\u00B0 / ${~~temp.temp_min}\u00B0`}
                     />
                     <TodaysDetails 
-                        icon={<img src="icons/uv.png" />}
+                        icon={<div className="material-icons details-mat-icon">wb_sunny</div>}
                         description="UV Index"
                         data={weather.uvi}
                     />
@@ -32,7 +32,7 @@ export default function TodaysWeather ({ name, weather, temp, timezoneOffset }) 
                 </div>
                 <div className="todays-details">
                     <TodaysDetails 
-                        icon={<img src="icons/wind.png" />}
+                        icon={<div className="material-icons details-mat-icon">air</div>}
                         description="Wind Speed"
                         data={`${~~weather.wind_speed} mph`}
                     />
