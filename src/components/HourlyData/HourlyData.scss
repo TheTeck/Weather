@@ -1,0 +1,13 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+#hourlydata-container {
+  width: 100%;
+  max-width: $break-mid;
+  height: 250px;
+  margin: 0 auto;
+  padding: $padding-content;
+  border-radius: $radius;
+  background-color: $color-muted-white;
+}

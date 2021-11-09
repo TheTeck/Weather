@@ -8,6 +8,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
 import TodayForecast from '../../components/TodayForecast/TodayForecast';
 import TodaysWeather from '../../components/TodaysWeather/TodaysWeather';
+import HourlyData from '../../components/HourlyData/HourlyData';
 
 let dummyData = require('../../dummyCurrent');
 let dummyWeekData = require('../../dummyWeek');
@@ -94,6 +95,8 @@ function App() {
               <TodayForecast name={currentData.name} hourly={allData.hourly} />
               <TodaysWeather name={currentData.name} weather={allData.current} temp={currentData.main} timezoneOffset={allData.timezone_offset} />
             </>
+          : active === 'Hourly' ?
+            <HourlyData />
           : <>Nothing Here Yet</>
         }
       </div>
