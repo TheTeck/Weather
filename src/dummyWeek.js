@@ -97,7 +97,12 @@ module.exports = {
         wind_speed: 4.85,
         wind_deg: 288,
         wind_gust: 16.2,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -113,7 +118,12 @@ module.exports = {
         wind_speed: 3.49,
         wind_deg: 286,
         wind_gust: 11.43,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -129,7 +139,12 @@ module.exports = {
         wind_speed: 3.85,
         wind_deg: 273,
         wind_gust: 9.26,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -145,7 +160,12 @@ module.exports = {
         wind_speed: 3.8,
         wind_deg: 265,
         wind_gust: 8.77,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -161,7 +181,12 @@ module.exports = {
         wind_speed: 3.33,
         wind_deg: 260,
         wind_gust: 6.96,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -177,7 +202,12 @@ module.exports = {
         wind_speed: 2.73,
         wind_deg: 252,
         wind_gust: 5.66,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -193,7 +223,12 @@ module.exports = {
         wind_speed: 3.2,
         wind_deg: 238,
         wind_gust: 4.94,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -209,7 +244,12 @@ module.exports = {
         wind_speed: 4.03,
         wind_deg: 235,
         wind_gust: 5.99,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -225,7 +265,12 @@ module.exports = {
         wind_speed: 5.37,
         wind_deg: 246,
         wind_gust: 8.57,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -241,7 +286,12 @@ module.exports = {
         wind_speed: 5.26,
         wind_deg: 240,
         wind_gust: 8.57,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -257,7 +307,12 @@ module.exports = {
         wind_speed: 5.73,
         wind_deg: 240,
         wind_gust: 8.93,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -273,7 +328,12 @@ module.exports = {
         wind_speed: 5.26,
         wind_deg: 238,
         wind_gust: 10.02,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -289,7 +349,12 @@ module.exports = {
         wind_speed: 4.47,
         wind_deg: 221,
         wind_gust: 9.8,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -305,7 +370,12 @@ module.exports = {
         wind_speed: 4.9,
         wind_deg: 233,
         wind_gust: 12.46,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -321,7 +391,12 @@ module.exports = {
         wind_speed: 4.38,
         wind_deg: 218,
         wind_gust: 12.15,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -337,7 +412,12 @@ module.exports = {
         wind_speed: 5.1,
         wind_deg: 220,
         wind_gust: 14.36,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -353,7 +433,12 @@ module.exports = {
         wind_speed: 4.94,
         wind_deg: 208,
         wind_gust: 13.69,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -369,7 +454,12 @@ module.exports = {
         wind_speed: 4.97,
         wind_deg: 206,
         wind_gust: 13.8,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -385,7 +475,12 @@ module.exports = {
         wind_speed: 4.92,
         wind_deg: 199,
         wind_gust: 14.27,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -401,7 +496,12 @@ module.exports = {
         wind_speed: 4.83,
         wind_deg: 204,
         wind_gust: 15.64,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -417,7 +517,12 @@ module.exports = {
         wind_speed: 4.41,
         wind_deg: 209,
         wind_gust: 15.84,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -433,7 +538,12 @@ module.exports = {
         wind_speed: 4.47,
         wind_deg: 209,
         wind_gust: 16.82,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -449,7 +559,12 @@ module.exports = {
         wind_speed: 4.65,
         wind_deg: 210,
         wind_gust: 16.89,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -465,7 +580,12 @@ module.exports = {
         wind_speed: 4.79,
         wind_deg: 212,
         wind_gust: 18.23,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -481,7 +601,12 @@ module.exports = {
         wind_speed: 4.88,
         wind_deg: 215,
         wind_gust: 18.45,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -497,7 +622,12 @@ module.exports = {
         wind_speed: 4.92,
         wind_deg: 214,
         wind_gust: 17.63,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -513,7 +643,12 @@ module.exports = {
         wind_speed: 5.35,
         wind_deg: 223,
         wind_gust: 17.18,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -529,7 +664,12 @@ module.exports = {
         wind_speed: 5.1,
         wind_deg: 225,
         wind_gust: 16.64,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -545,7 +685,12 @@ module.exports = {
         wind_speed: 5.12,
         wind_deg: 223,
         wind_gust: 16.84,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -561,7 +706,12 @@ module.exports = {
         wind_speed: 4.99,
         wind_deg: 224,
         wind_gust: 17.16,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -577,7 +727,12 @@ module.exports = {
         wind_speed: 5.39,
         wind_deg: 225,
         wind_gust: 17.54,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -593,7 +748,12 @@ module.exports = {
         wind_speed: 6.85,
         wind_deg: 227,
         wind_gust: 16.98,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -609,7 +769,12 @@ module.exports = {
         wind_speed: 7.65,
         wind_deg: 232,
         wind_gust: 16.44,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -625,7 +790,12 @@ module.exports = {
         wind_speed: 8.3,
         wind_deg: 231,
         wind_gust: 15.79,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -641,7 +811,12 @@ module.exports = {
         wind_speed: 8.66,
         wind_deg: 232,
         wind_gust: 15.12,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -657,7 +832,12 @@ module.exports = {
         wind_speed: 7.67,
         wind_deg: 232,
         wind_gust: 14.32,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -673,7 +853,12 @@ module.exports = {
         wind_speed: 7.74,
         wind_deg: 230,
         wind_gust: 14.7,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -689,7 +874,12 @@ module.exports = {
         wind_speed: 7.38,
         wind_deg: 223,
         wind_gust: 15.48,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -705,7 +895,12 @@ module.exports = {
         wind_speed: 6.46,
         wind_deg: 215,
         wind_gust: 17.11,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -721,7 +916,12 @@ module.exports = {
         wind_speed: 6.35,
         wind_deg: 207,
         wind_gust: 18.7,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -737,7 +937,12 @@ module.exports = {
         wind_speed: 6.31,
         wind_deg: 206,
         wind_gust: 20.15,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -753,7 +958,12 @@ module.exports = {
         wind_speed: 6.62,
         wind_deg: 212,
         wind_gust: 21.61,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -769,7 +979,12 @@ module.exports = {
         wind_speed: 6.76,
         wind_deg: 215,
         wind_gust: 22.55,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -785,7 +1000,12 @@ module.exports = {
         wind_speed: 7.07,
         wind_deg: 208,
         wind_gust: 23.26,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -801,7 +1021,12 @@ module.exports = {
         wind_speed: 7.58,
         wind_deg: 210,
         wind_gust: 23.6,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -817,7 +1042,12 @@ module.exports = {
         wind_speed: 8.05,
         wind_deg: 212,
         wind_gust: 23.04,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -833,7 +1063,12 @@ module.exports = {
         wind_speed: 8.43,
         wind_deg: 217,
         wind_gust: 23.15,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       },
       {
@@ -849,7 +1084,12 @@ module.exports = {
         wind_speed: 8.32,
         wind_deg: 222,
         wind_gust: 22.53,
-        weather: [Array],
+        weather: [{
+          "id": 801,
+          "main": "Clouds",
+          "description": "few clouds",
+          "icon": "02n"
+        }],
         pop: 0
       }
     ],

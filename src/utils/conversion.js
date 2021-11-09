@@ -1,5 +1,6 @@
 module.exports = {
-    windDirection
+    windDirection,
+    capitalizeAllWords
 }
 
 function windDirection (wd) {
@@ -40,4 +41,11 @@ function windDirection (wd) {
     }
 
     return windDirection;
+}
+
+function capitalizeAllWords (str) {
+    let words = str.split(' ');
+    return words.map(word => {
+        return word[0].toUpperCase() + (word.length > 1 ? word.slice(1) : '');
+    }).join(' ');
 }

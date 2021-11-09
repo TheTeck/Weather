@@ -14,17 +14,22 @@
   font-family: $font-primary;
 }
 
-.onehour-leftside {
+.onehour-leftside,
+.onehour-rightside {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   font-family: $font-primary;
   color: $color-font-dark;
   column-gap: 20px;
 }
 
+.onehour-rightside {
+  justify-content: space-between;
+}
+
 .onehour-time {
-  font-size: $font-tiny;
-  width: 65px;
+  font-size: $font-bity;
+  width: 75px;
   text-align: center;
 }
 
@@ -32,4 +37,67 @@
   font-size: $font-small;
   font-weight: $font-heavy-weight;
   width: 50px;
+}
+
+.onehour-more {
+  font-size: $font-large;
+  color: $color-secondary;
+}
+
+.onehour-rain-wind,
+.onehour-rain,
+.onehour-weather {
+  display: flex;
+  align-items: center;
+}
+
+.onehour-weather div {
+  font-size: $font-bity;
+  margin-left: 3px;
+  width: 0;
+  visibility: hidden;
+}
+
+.onehour-rain img {
+  width: 30px;
+  height: 30px;
+}
+
+.onehour-rain div {
+  font-size: $font-bity;
+  font-weight: $font-light-weight;
+  margin-left: 3px;
+  width: 40px;
+  opacity: 0.8;
+}
+
+.onehour-wind {
+  visibility: hidden;
+  width: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.onehour-wind-icon {
+  color: $color-secondary;
+}
+
+.onehour-wind-data {
+  font-size: $font-bity;
+  margin-left: 3px;
+}
+
+@media (min-width: $break-small) {
+  .onehour-wind {
+    visibility: visible;
+    width: 130px;
+  }
+  .onehour-rain {
+    width: 70px;
+  }
+  .onehour-weather div {
+    visibility: visible;
+    width: 100%;
+  }
 }
