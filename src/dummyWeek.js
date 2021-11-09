@@ -16,7 +16,7 @@ module.exports = {
       clouds: 70,
       visibility: 10000,
       wind_speed: 1.01,
-      wind_deg: 259,
+      wind_deg: 350,
       wind_gust: 4,
       weather: [ [Object] ]
     },
