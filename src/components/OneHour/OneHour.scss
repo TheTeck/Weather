@@ -12,6 +12,18 @@
   justify-content: space-between;
   align-items: center;
   font-family: $font-primary;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.onehour-extended-container {
+  width: 100%;
+  height: 100px;
+  padding: $padding-small;
+  background-color: $color-muted-white;
 }
 
 .onehour-leftside,
@@ -31,6 +43,13 @@
   font-size: $font-bity;
   width: 75px;
   text-align: center;
+}
+
+.onehour-extended-title {
+  font-family: $font-primary;
+  font-size: $font-small;
+  font-weight: $font-heavy-weight;
+  color: $color-font-dark;
 }
 
 .onehour-temp {
@@ -99,5 +118,8 @@
   .onehour-weather div {
     visibility: visible;
     width: 100%;
+  }
+  .onehour-extended-title {
+    visibility: hidden;
   }
 }
