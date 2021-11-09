@@ -9,5 +9,23 @@
   margin: 0 auto;
   padding: $padding-content;
   border-radius: $radius;
-  background-color: $color-muted-white;
+  background-color: $color-shaded-white;
+  font-family: $font-primary;
+}
+
+#hourly-title {
+  font-size: $font-small;
+  font-weight: $font-mid-weight;
+  opacity: 0.9;
+
+  span {
+    font-size: $font-medium;
+    font-weight: $font-heavy-weight;
+  }
+}
+
+#hourly-date {
+  font-size: $font-small;
+  font-weight: $font-heavy-weight;
+  opacity: 0.8;
 }

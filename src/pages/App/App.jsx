@@ -93,10 +93,15 @@ function App() {
                   day={day}
               />
               <TodayForecast name={currentData.name} hourly={allData.hourly} />
-              <TodaysWeather name={currentData.name} weather={allData.current} temp={currentData.main} timezoneOffset={allData.timezone_offset} />
+              <TodaysWeather 
+                name={currentData.name} 
+                weather={allData.current} 
+                temp={currentData.main} 
+                timezoneOffset={allData.timezone_offset} 
+              />
             </>
           : active === 'Hourly' ?
-            <HourlyData />
+            <HourlyData name={currentData.name} data={allData.current} timezoneOffset={allData.timezone_offset} />
           : <>Nothing Here Yet</>
         }
       </div>
