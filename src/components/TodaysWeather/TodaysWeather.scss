@@ -27,6 +27,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 
 .flex-split {
@@ -61,7 +62,6 @@
 
 .todays-details {
   width: 100%;
-  height: 100px;
   padding: 0 10px;
 }
 
@@ -71,5 +71,11 @@
   }
   .todays-details {
     width: 49%;
+  }
+}
+
+@media (min-width: 500px) {
+  .split-left-right {
+    padding: 0 $padding-small;
   }
 }

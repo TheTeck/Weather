@@ -34,5 +34,8 @@
 
 #rise-set-data p {
   line-height: $font-small;
+  font-family: $font-primary;
+  font-weight: $font-mid-weight;
+  opacity: 0.6;
   margin: 0;
 }
