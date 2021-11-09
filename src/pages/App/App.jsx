@@ -101,7 +101,12 @@ function App() {
               />
             </>
           : active === 'Hourly' ?
-            <HourlyData name={currentData.name} data={allData.current} timezoneOffset={allData.timezone_offset} />
+            <HourlyData 
+              name={currentData.name} 
+              data={allData.current} 
+              timezoneOffset={allData.timezone_offset}
+              hours={allData.hourly}
+            />
           : <>Nothing Here Yet</>
         }
       </div>

@@ -5,12 +5,24 @@
 #hourlydata-container {
   width: 100%;
   max-width: $break-mid;
-  height: 250px;
+  height: 100%;
   margin: 0 auto;
-  padding: $padding-content;
   border-radius: $radius;
-  background-color: $color-shaded-white;
   font-family: $font-primary;
+}
+
+#hours-container {
+  padding: 0 $padding-small $padding-small $padding-small;
+  background-color: $color-muted-white;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+#hourly-header {
+  padding: $padding-content;
+  background: linear-gradient($color-font-light, $color-shaded-white);
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
 }
 
 #hourly-title {
