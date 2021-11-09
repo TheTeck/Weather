@@ -4,8 +4,8 @@
 
 #todaysweather-container {
   width: 100%;
+  height: 100%;
   max-width: $break-mid;
-  height: 320px;
   margin: $padding-small auto 0 auto;
   padding: $padding-small;
   border-radius: $radius;
@@ -25,9 +25,15 @@
 
 .split-left-right {
   width: 100%;
-  height: 100px;
   display: flex;
   justify-content: space-between;
+}
+
+.flex-split {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
 }
 
 #todays-temp {
@@ -51,4 +57,19 @@
   opacity: 0.6;
   margin: 0;
   line-height: $font-small;
+}
+
+.todays-details {
+  width: 100%;
+  height: 100px;
+  padding: 0 10px;
+}
+
+@media (min-width: $break-mid) {
+  .flex-split {
+    flex-direction: row;
+  }
+  .todays-details {
+    width: 49%;
+  }
 }
