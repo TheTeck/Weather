@@ -4,8 +4,19 @@
 
 .extendeddetail-container {
   width: 50%;
-  height: 50px;
-  border: 1px solid green;
+  padding: $padding-small 0;
+  display: flex;
+}
+
+.extra-icon {
+  color: $color-secondary;
+  margin-right: $padding-small;
+}
+
+.extra-data {
+  font-size: $font-bity;
+  font-weight: $font-heavy-weight;
+  font-family: $font-primary;
 }
 
 @media (min-width: $break-small) {
