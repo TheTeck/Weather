@@ -2,7 +2,7 @@
 @import "../../sass/fonts";
 @import "../../sass/dimensions";
 
-.daysummary-container {
+.daysummary-main-container {
   width: 100%;
   height: $one-hour-height;
   background-color: $color-muted-white;
@@ -16,5 +16,88 @@
 
   &:hover {
     opacity: 0.6;
+  }
+}
+
+.daysummary-leftside,
+.daysummary-rightside {
+  display: flex;
+  align-items: center;
+  font-family: $font-primary;
+  color: $color-font-dark;
+  column-gap: 20px;
+}
+
+.daysummary-rightside {
+  justify-content: space-between;
+}
+
+.daysummary-date {
+  font-size: $font-bity;
+  width: 65px;
+  text-align: left;
+}
+
+.daysummary-temp {
+  font-size: $font-small;
+  font-weight: $font-heavy-weight;
+  width: 70px;
+}
+
+.daysummary-rain-wind,
+.daysummary-rain,
+.daysummary-weather {
+  display: flex;
+  align-items: center;
+}
+
+.daysummary-weather div {
+  font-size: $font-bity;
+  margin-left: 3px;
+  width: 0;
+  visibility: hidden;
+}
+
+.daysummary-rain img {
+  width: 30px;
+  height: 30px;
+}
+
+.daysummary-rain div {
+  font-size: $font-bity;
+  font-weight: $font-light-weight;
+  margin-left: 3px;
+  width: 40px;
+  opacity: 0.8;
+}
+
+.daysummary-wind {
+  visibility: hidden;
+  width: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.daysummary-wind-icon {
+  color: $color-secondary;
+}
+
+.daysummary-wind-data {
+  font-size: $font-bity;
+  margin-left: 3px;
+}
+
+@media (min-width: $break-small) {
+  .daysummary-wind {
+    visibility: visible;
+    width: 130px;
+  }
+  .daysummary-rain {
+    width: 70px;
+  }
+  .daysummary-weather div {
+    visibility: visible;
+    width: 100%;
   }
 }
