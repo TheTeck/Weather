@@ -42,8 +42,8 @@ function App() {
 
   async function getCurrent () {
     try {
-      /////let data = await apiService.getCurrent(location);
-      let data = dummyData;
+      let data = await apiService.getCurrent(location);
+      /////let data = dummyData;
       setCurrentData(data);
 
     } catch (error) {
@@ -53,8 +53,8 @@ function App() {
 
   async function getWeek (latitude, longitude) {
     try {
-      /////let weekData = await apiService.getSevenDay(latitude, longitude);
-      let weekData = dummyWeekData;
+      let weekData = await apiService.getSevenDay(latitude, longitude);
+      /////let weekData = dummyWeekData;
       setAllData(weekData);
     } catch (error) {
       console.log(error.message);
