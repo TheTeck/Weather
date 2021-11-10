@@ -93,7 +93,13 @@ function App() {
                   name={currentData.name} 
                   day={day}
               />
-              <TodayForecast name={currentData.name} hourly={allData.hourly} />
+              <TodayForecast 
+                name={currentData.name} 
+                hourly={allData.hourly} 
+                currentTime={allData.current.dt}
+                timezoneOffset={allData.timezone_offset}
+                temps={allData.daily[0].temp} 
+              />
               <TodaysWeather 
                 name={currentData.name} 
                 weather={allData.current} 
