@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './OneHour.scss';
 import Conversion from '../../utils/conversion';
 import DynamicIcon from '../../components/DynamicIcon/DynamicIcon';
+import HourlyExtendedDetail from '../HourlyExtendedDetail/HourlyExtendedDetail';
 
 export default function OneHour ({ hour, timeOffset, day }) {
 
@@ -51,6 +52,12 @@ export default function OneHour ({ hour, timeOffset, day }) {
             {
                 expanded ? <div className="onehour-extended-container" onClick={toggleExpanded}>
                     <div className="onehour-extended-title">{Conversion.capitalizeAllWords(hour.weather[0].description)}</div>
+                    <div className="extended-container">
+                        <HourlyExtendedDetail />
+                        <HourlyExtendedDetail />
+                        <HourlyExtendedDetail />
+                        <HourlyExtendedDetail />
+                    </div>
                 </div> : ''
             }
             

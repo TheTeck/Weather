@@ -21,8 +21,8 @@
 
 .onehour-extended-container {
   width: 100%;
-  height: 100px;
-  padding: $padding-small;
+  height: 100%;
+  padding: 0 $padding-small $padding-small $padding-small;
   background-color: $color-muted-white;
 }
 
@@ -50,6 +50,17 @@
   font-size: $font-small;
   font-weight: $font-heavy-weight;
   color: $color-font-dark;
+  padding-bottom: $padding-small;
+}
+
+.extended-container {
+  width: 100%;
+  height: 100%;
+  padding: $padding-small;
+  border: 2px solid $color-shaded-white;
+  border-radius: $radius;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .onehour-temp {
@@ -121,5 +132,7 @@
   }
   .onehour-extended-title {
     visibility: hidden;
+    height: 0;
+    padding: 0;
   }
 }
