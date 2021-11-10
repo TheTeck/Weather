@@ -29,3 +29,10 @@
     }
   }
 }
+
+#weekweather-days {
+  padding: 0 $padding-small $padding-small $padding-small;
+  background-color: $color-muted-white;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}

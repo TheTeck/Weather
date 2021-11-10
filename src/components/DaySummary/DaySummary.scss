@@ -1,0 +1,20 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+.daysummary-container {
+  width: 100%;
+  height: $one-hour-height;
+  background-color: $color-muted-white;
+  border-top: 1px solid $color-shaded-white;
+  padding: 0 $padding-small;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-primary;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
