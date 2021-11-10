@@ -1,0 +1,15 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+.extendeddetail-container {
+  width: 50%;
+  height: 50px;
+  border: 1px solid green;
+}
+
+@media (min-width: $break-small) {
+  .extendeddetail-container {
+    width: 25%;
+  }
+}
