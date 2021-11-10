@@ -23,7 +23,8 @@
   width: 100%;
   height: 100%;
   padding: 0 $padding-small $padding-small $padding-small;
-  background-color: $color-muted-white;
+  background: linear-gradient($color-muted-white, $color-muted-dark-white);
+  cursor: pointer;
 }
 
 .onehour-leftside,
@@ -56,8 +57,8 @@
 .extended-container {
   width: 100%;
   height: 100%;
-  padding: $padding-small;
-  border: 2px solid $color-shaded-white;
+  padding: 0 $padding-small;
+  border: 1px solid $color-shaded-white;
   border-radius: $radius;
   display: flex;
   flex-wrap: wrap;
@@ -118,6 +119,12 @@
   margin-left: 3px;
 }
 
+.extra-divider {
+  width: 100%;
+  height: 1px;
+  background-color: $color-shaded-white;
+}
+
 @media (min-width: $break-small) {
   .onehour-wind {
     visibility: visible;
@@ -134,5 +141,10 @@
     visibility: hidden;
     height: 0;
     padding: 0;
+  }
+  .extra-divider {
+    visibility: hidden;
+    height: 0;
+    width: 0;
   }
 }

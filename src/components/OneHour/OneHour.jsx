@@ -53,10 +53,27 @@ export default function OneHour ({ hour, timeOffset, day }) {
                 expanded ? <div className="onehour-extended-container" onClick={toggleExpanded}>
                     <div className="onehour-extended-title">{Conversion.capitalizeAllWords(hour.weather[0].description)}</div>
                     <div className="extended-container">
-                        <HourlyExtendedDetail />
-                        <HourlyExtendedDetail />
-                        <HourlyExtendedDetail />
-                        <HourlyExtendedDetail />
+                        <HourlyExtendedDetail 
+                            icon="thermostat"
+                            title="Feels Like"
+                            data={~~hour.feels_like + '\u00B0'}
+                        />
+                        <HourlyExtendedDetail 
+                            icon="air"
+                            title="Wind"
+                            data={`${Conversion.windDirection(hour.wind_deg)} ${~~hour.wind_speed} mph`}
+                        />
+                        <div className="extra-divider"></div>
+                        <HourlyExtendedDetail 
+                            icon="water_drop"
+                            title="Humidity"
+                            data={hour.humidity + '%'}
+                        />
+                        <HourlyExtendedDetail 
+                            icon="wb_sunny"
+                            title="UV Index"
+                            data={~~hour.uvi + ' of 10'}
+                        />
                     </div>
                 </div> : ''
             }
