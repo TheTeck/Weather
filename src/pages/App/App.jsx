@@ -108,7 +108,12 @@ function App() {
               timezoneOffset={allData.timezone_offset}
               hours={allData.hourly}
             />
-          : <WeekWeather name={currentData.name} />
+          : <WeekWeather 
+            name={currentData.name} 
+            days={allData.daily} 
+            timeOffset={allData.timezone_offset} 
+            isDay={day} 
+          />
         }
       </div>
     </div>
