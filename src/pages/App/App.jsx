@@ -9,6 +9,7 @@ import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
 import TodayForecast from '../../components/TodayForecast/TodayForecast';
 import TodaysWeather from '../../components/TodaysWeather/TodaysWeather';
 import HourlyData from '../../components/HourlyData/HourlyData';
+import WeekWeather from '../../components/WeekWeather/WeekWeather';
 
 let dummyData = require('../../dummyCurrent');
 let dummyWeekData = require('../../dummyWeek');
@@ -107,7 +108,7 @@ function App() {
               timezoneOffset={allData.timezone_offset}
               hours={allData.hourly}
             />
-          : <>Nothing Here Yet</>
+          : <WeekWeather name={currentData.name} />
         }
       </div>
     </div>
