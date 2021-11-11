@@ -1,6 +1,8 @@
 module.exports = {
     windDirection,
-    capitalizeAllWords
+    capitalizeAllWords,
+    moonPhase,
+    dateToTime
 }
 
 function windDirection (wd) {
@@ -48,4 +50,32 @@ function capitalizeAllWords (str) {
     return words.map(word => {
         return word[0].toUpperCase() + (word.length > 1 ? word.slice(1) : '');
     }).join(' ');
+}
+
+function moonPhase (phase) {
+    let phaseName = "New Moon";
+
+    if (phase > 0 && phase < 0.25)
+        phaseName = "Waxing Crescent"
+    else if (phase === 0.25)
+        phaseName = "First Quarter"
+    else if (phase > 0.25 && phase < 0.5) 
+        phaseName = "Waxing Gibbous"
+    else if (phase === 0.5)
+        phaseName = "Full Moon"
+    else if (phase > 0.5 && phase < 0.75)
+        phaseName = "Waning Gibbous"
+    else if (phase === 0.75)
+        phaseName = "Last Quarter"
+    else if (phase > 0.75 && phase < 1)
+        phaseName = "Waning Crescent"
+    
+    return phaseName
+}
+
+function dateToTime (date) {
+    let hour = date.getHours() % 12; 
+    let minute = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
+
+    return hour + ':' + minute
 }
