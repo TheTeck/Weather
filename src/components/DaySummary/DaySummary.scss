@@ -34,7 +34,7 @@
 }
 
 .extra-wrapper {
-  padding: $padding-small;
+  padding: 0 $padding-small $padding-small $padding-small;
   display: flex;
   flex-direction: column;
 }

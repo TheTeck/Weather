@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './OneHour.scss';
 import Conversion from '../../utils/conversion';
 import DynamicIcon from '../../components/DynamicIcon/DynamicIcon';
-import HourlyExtendedDetail from '../HourlyExtendedDetail/HourlyExtendedDetail';
+import ExtendedDetail from '../ExtendedDetail/ExtendedDetail';
 
 export default function OneHour ({ hour, timeOffset, day }) {
 
@@ -53,26 +53,30 @@ export default function OneHour ({ hour, timeOffset, day }) {
                 expanded ? <div className="onehour-extended-container" onClick={toggleExpanded}>
                     <div className="onehour-extended-title">{Conversion.capitalizeAllWords(hour.weather[0].description)}</div>
                     <div className="extended-container">
-                        <HourlyExtendedDetail 
+                        <ExtendedDetail 
                             icon="thermostat"
                             title="Feels Like"
                             data={~~hour.feels_like + '\u00B0'}
+                            isFlex={true}
                         />
-                        <HourlyExtendedDetail 
+                        <ExtendedDetail 
                             icon="air"
                             title="Wind"
                             data={`${Conversion.windDirection(hour.wind_deg)} ${~~(hour.wind_speed + 0.5)} mph`}
+                            isFlex={true}
                         />
                         <div className="extra-divider"></div>
-                        <HourlyExtendedDetail 
+                        <ExtendedDetail 
                             icon="water_drop"
                             title="Humidity"
                             data={hour.humidity + '%'}
+                            isFlex={true}
                         />
-                        <HourlyExtendedDetail 
+                        <ExtendedDetail 
                             icon="wb_sunny"
                             title="UV Index"
                             data={~~(hour.uvi + 0.5) + ' of 10'}
+                            isFlex={true}
                         />
                     </div>
                 </div> : ''

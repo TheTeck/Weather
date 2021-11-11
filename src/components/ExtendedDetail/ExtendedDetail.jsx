@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './HourlyExtendedDetail.scss';
+import './ExtendedDetail.scss';
 
-export default function HourlyExtendedDetail ({ icon, title, data }) {
+export default function ExtendedDetail ({ icon, title, data, isFlex }) {
     return (
-        <div className="extendeddetail-container">
+        <div className={"extendeddetail-container" + (isFlex ? " extendeddetail-get-smaller" : '')}>
             <div className="material-icons extra-icon">{icon}</div>
             <div>
                 <div>{title}</div>
