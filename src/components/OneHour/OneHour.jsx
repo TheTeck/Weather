@@ -34,12 +34,12 @@ export default function OneHour ({ hour, timeOffset, day }) {
                     <div className="onehour-rain-wind">
                         <div className="onehour-rain">
                             <img src="icons/rain.png" />
-                            <div>{~~hour.pop + '\u00B0'}</div>
+                            <div>{~~(hour.pop + 0.5) + '\u00B0'}</div>
                         </div>
                         <div className="onehour-wind">
                             <div className="material-icons onehour-wind-icon">air</div>
                             <div className="onehour-wind-data">
-                                {`${Conversion.windDirection(hour.wind_deg)} ${~~hour.wind_speed} mph`}
+                                {`${Conversion.windDirection(hour.wind_deg)} ${~~(hour.wind_speed + 0.5)} mph`}
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ export default function OneHour ({ hour, timeOffset, day }) {
                         <HourlyExtendedDetail 
                             icon="air"
                             title="Wind"
-                            data={`${Conversion.windDirection(hour.wind_deg)} ${~~hour.wind_speed} mph`}
+                            data={`${Conversion.windDirection(hour.wind_deg)} ${~~(hour.wind_speed + 0.5)} mph`}
                         />
                         <div className="extra-divider"></div>
                         <HourlyExtendedDetail 
@@ -72,7 +72,7 @@ export default function OneHour ({ hour, timeOffset, day }) {
                         <HourlyExtendedDetail 
                             icon="wb_sunny"
                             title="UV Index"
-                            data={~~hour.uvi + ' of 10'}
+                            data={~~(hour.uvi + 0.5) + ' of 10'}
                         />
                     </div>
                 </div> : ''
