@@ -41,14 +41,14 @@ export default function TodaysWeather ({ name, weather, temp, timezoneOffset }) 
                     <TodaysDetails 
                         icon={<div className="material-icons details-mat-icon">wb_sunny</div>}
                         description="UV Index"
-                        data={weather.uvi}
+                        data={~~(weather.uvi + 0.5) + ' of 10'}
                     />
                 </div>
                 <div className="todays-details">
                     <TodaysDetails 
                         icon={<div className="material-icons details-mat-icon">air</div>}
                         description="Wind Speed"
-                        data={`${~~weather.wind_speed} mph`}
+                        data={~~(weather.wind_speed + 0.5) + ' mph'}
                     />
                     <TodaysDetails 
                         icon={<div className="material-icons details-mat-icon">near_me</div>}
@@ -63,7 +63,7 @@ export default function TodaysWeather ({ name, weather, temp, timezoneOffset }) 
                     <TodaysDetails 
                         icon={<div className="material-icons details-mat-icon">visibility</div>}
                         description="Visibility"
-                        data={`${~~(weather.visibility / METER_PER_MILE)} mi`}
+                        data={`${~~((weather.visibility / METER_PER_MILE) + 0.5)} mi`}
                     />
                 </div>
             </div>
