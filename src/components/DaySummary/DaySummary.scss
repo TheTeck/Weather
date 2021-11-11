@@ -19,6 +19,26 @@
   }
 }
 
+.daysummary-extra-full-container {
+  width: 100%;
+  height: 100%;
+  background-color: $color-muted-white;
+  border-top: 1px solid $color-shaded-white;
+  font-family: $font-primary;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.extra-wrapper {
+  padding: $padding-small;
+  display: flex;
+  flex-direction: column;
+}
+
 .daysummary-leftside,
 .daysummary-rightside {
   display: flex;
@@ -26,6 +46,23 @@
   font-family: $font-primary;
   color: $color-font-dark;
   column-gap: 20px;
+}
+
+.daysummary-more {
+  font-size: $font-large;
+  color: $color-secondary;
+}
+
+.daysummary-less {
+  font-size: $font-large;
+  color: $color-secondary;
+  width: 100%;
+  height: $one-hour-height;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: $padding-small;
 }
 
 .daysummary-rightside {
@@ -99,5 +136,11 @@
   .daysummary-weather div {
     visibility: visible;
     width: 100%;
+  }
+
+  .extra-wrapper {
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }

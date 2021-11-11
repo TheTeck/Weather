@@ -1,0 +1,68 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+.dayextra-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dayextra-header {
+  font-size: $font-small;
+
+  span {
+    font-weight: $font-heavy-weight;
+  }
+}
+
+.extra-main-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.extra-big-temp {
+  font-size: $font-huge;
+  font-weight: $font-heavy-weight;
+  padding: $padding-small 0;
+}
+
+.extra-wind-rain {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wind-or-rain {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon-text {
+    font-size: $font-small;
+    font-weight: $font-light-weight;
+    padding-left: 5px;
+  }
+}
+
+.blue-icon {
+  color: $color-secondary;
+}
+
+@media (min-width: $break-small) {
+  .dayextra-container {
+    width: 47%;
+    margin: $padding-small 0;
+  }
+}
