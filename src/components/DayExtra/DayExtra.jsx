@@ -16,7 +16,7 @@ export default function DayExtra ({ data }) {
                 <div className="extra-wind-rain">
                     <div className="wind-or-rain">
                         <img src="icons/rain.png" />
-                        <div className="icon-text">{data.pop}%</div>
+                        <div className="icon-text">{~~(data.pop + 0.5)}%</div>
                     </div>
                     <div className="wind-or-rain">
                         <div className="material-icons blue-icon">air</div>

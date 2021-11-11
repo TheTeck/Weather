@@ -22,7 +22,7 @@
 .daysummary-extra-full-container {
   width: 100%;
   height: 100%;
-  background-color: $color-muted-white;
+  background: linear-gradient($color-muted-white, $color-muted-dark-white);
   border-top: 1px solid $color-shaded-white;
   font-family: $font-primary;
   cursor: pointer;
