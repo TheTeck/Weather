@@ -57,7 +57,7 @@
 .extended-container {
   width: 100%;
   height: 100%;
-  padding: 0 $padding-small;
+  padding: 0 $padding-small $padding-small $padding-small;
   border: 1px solid $color-shaded-white;
   border-radius: $radius;
   display: flex;
@@ -123,6 +123,7 @@
   width: 100%;
   height: 1px;
   background-color: $color-shaded-white;
+  margin-top: $padding-small;
 }
 
 @media (min-width: $break-small) {

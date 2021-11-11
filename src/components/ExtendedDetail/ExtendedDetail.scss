@@ -4,7 +4,7 @@
 
 .extendeddetail-container {
   width: 50%;
-  padding: $padding-small 0;
+  padding-top: $padding-small;
   display: flex;
 }
 
@@ -20,7 +20,7 @@
 }
 
 @media (min-width: $break-small) {
-  .extendeddetail-container {
+  .extendeddetail-get-smaller {
     width: 25%;
   }
 }

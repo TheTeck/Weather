@@ -7,6 +7,29 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  padding-top: $padding-small;
+}
+
+.day-extended-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $color-shaded-white;
+  border-radius: $radius;
+  padding: 0 $padding-small $padding-small $padding-small;
+  margin-top: $padding-small;
+}
+
+.day-extended-wrapper {
+  display: flex;
+}
+
+.always-divider {
+  width: 100%;
+  height: 1px;
+  background-color: $color-shaded-white;
+  margin-top: $padding-small;
 }
 
 .dayextra-header {
@@ -60,9 +83,35 @@
   color: $color-secondary;
 }
 
+.moon-phase {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+
+  p {
+    margin-left: 5px;
+    font-weight: $font-heavy-weight;
+    font-size: $font-bity;
+  }
+
+  div {
+    opacity: 0.7;
+  }
+}
+
+.no-moon-phase {
+  width: 100%;
+  height: 0;
+}
+
 @media (min-width: $break-small) {
   .dayextra-container {
     width: 47%;
-    margin: $padding-small 0;
+    margin-bottom: $padding-small;
+  }
+  .no-moon-phase {
+    height: 30px;
   }
 }
