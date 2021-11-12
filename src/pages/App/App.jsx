@@ -10,6 +10,7 @@ import TodayForecast from '../../components/TodayForecast/TodayForecast';
 import TodaysWeather from '../../components/TodaysWeather/TodaysWeather';
 import HourlyData from '../../components/HourlyData/HourlyData';
 import WeekWeather from '../../components/WeekWeather/WeekWeather';
+import Loading from '../../components/Loading/Loading';
 
 let dummyData = require('../../dummyCurrent');
 let dummyWeekData = require('../../dummyWeek');
@@ -24,6 +25,7 @@ function App() {
   const [day, setDay] = useState(true);
   const [active, setActive] = useState('Today');
   const [zip, setZip] = useState('local');
+  const [isLoading, setIsLoading] = useState(false);
 
   // Navigational options
   const PAGES = ["Today", "Hourly", "7 Day"];
@@ -40,15 +42,16 @@ function App() {
 
   async function getCurrent () {
     try {
+      setIsLoading(true);
       let data = await apiService.getCurrent(zip);
       /////let data = dummyData;
-      console.log(data)
       if (data.cod === 200) {
         setZipError('');
         setCurrentData(data);
+        setIsLoading(false);
       } else {
-        console.log(data.cod)
         setZipError(data.message);
+        setIsLoading(false);
       }
 
     } catch (err) {
@@ -77,6 +80,7 @@ function App() {
 
   return (
     <div id="App">
+      { isLoading ? <Loading /> : '' }
       <header>
         <MainHeader getZipcode={getZipcode} />
         <SubHeader 
