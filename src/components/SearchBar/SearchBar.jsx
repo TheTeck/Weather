@@ -26,13 +26,20 @@ export default function SearchBar (props) {
         }
     }
 
+    function handleEnterPress (e) {
+        if (e.keyCode === 13) {
+            handleSearchClick();
+        }
+    }
+    
     return (
         <div id="searchbar-container">
             <input 
                 id="search-input" 
                 placeholder={DEFAULT_PROMPT}
                 value={zip} 
-                onChange={handleZipChange}>
+                onChange={handleZipChange}
+                onKeyUp={handleEnterPress}>
             </input>
             
             <div id="search-button" onClick={handleSearchClick}>

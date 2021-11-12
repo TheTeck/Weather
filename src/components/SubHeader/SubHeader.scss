@@ -13,6 +13,17 @@
   color: $color-font-light;
   font-family: $font-primary;
   font-size: $font-tiny;
+  position: relative;
+}
+
+#error-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: $font-small;
+  color: $color-shaded-white;
+  font-weight: $font-heavy-weight;
 }
 
 #subheader-name {
