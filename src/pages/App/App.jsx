@@ -23,7 +23,7 @@ function App() {
   const [allData, setAllData] = useState(dummyWeekData);
   const [day, setDay] = useState(true);
   const [active, setActive] = useState('Today');
-  const [zip, setZip] = useState('94513');
+  const [zip, setZip] = useState('local');
 
   // Navigational options
   const PAGES = ["Today", "Hourly", "7 Day"];
@@ -42,11 +42,12 @@ function App() {
     try {
       let data = await apiService.getCurrent(zip);
       /////let data = dummyData;
+      console.log(data)
       if (data.cod === 200) {
         setZipError('');
         setCurrentData(data);
       } else {
-        console.log(data.message)
+        console.log(data.cod)
         setZipError(data.message);
       }
 
