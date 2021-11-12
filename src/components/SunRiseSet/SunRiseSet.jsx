@@ -17,12 +17,12 @@ export default function SunRiseSet ({ sunrise, sunset, timezoneOffset }) {
     return (
         <div id="sunriseset-container">
             <div id="sun-outline"></div>
-            <p id="rise-set-data">
+            <div id="rise-set-data">
                 <div className="material-icons">upload</div>
                 <p>{`${sRiseHour}:${sRiseMinute} am`}</p>
                 <div className="material-icons">download</div>
                 <p>{`${sSetHour}:${sSetMinute} pm`}</p>
-            </p>
+            </div>
         </div>
     )
 }

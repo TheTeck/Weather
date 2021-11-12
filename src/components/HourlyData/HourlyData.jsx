@@ -23,7 +23,7 @@ export default function HourlyData ({ name, data, timezoneOffset, hours }) {
                     
                     hours.slice(0, 24).map((hour, index) => {
                         let day = (hour.dt >= data.sunrise && hour.dt <= data.sunset) 
-                            ||  hour.dt >= data.sunrise + ONE_DAY && hour.dt <= data.sunset + ONE_DAY;
+                            ||  (hour.dt >= data.sunrise + ONE_DAY && hour.dt <= data.sunset + ONE_DAY);
                         return <OneHour hour={hour} timeOffset={timezoneOffset} key={index} day={day} />
                     })
                 }

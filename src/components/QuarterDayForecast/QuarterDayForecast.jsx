@@ -2,7 +2,6 @@ import React from 'react';
 
 import './QuarterDayForecast.scss';
 import DynamicIcon from '../DynamicIcon/DynamicIcon';
-import HourlyData from '../HourlyData/HourlyData';
 
 export default function QuarterDayForecast ({ title, hour, day, temp }) {
     return (

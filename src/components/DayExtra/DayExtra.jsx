@@ -15,7 +15,7 @@ export default function DayExtra ({ data }) {
                 <DynamicIcon width={60} height={60} weather={data.main} day={data.title === 'Day'} />
                 <div className="extra-wind-rain">
                     <div className="wind-or-rain">
-                        <img src="icons/rain.png" />
+                        <img src="icons/rain.png" alt="Cloud with rain falling down from it." />
                         <div className="icon-text">{~~(data.pop + 0.5)}%</div>
                     </div>
                     <div className="wind-or-rain">

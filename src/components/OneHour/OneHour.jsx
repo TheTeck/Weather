@@ -33,7 +33,7 @@ export default function OneHour ({ hour, timeOffset, day }) {
                 <div className="onehour-rightside">
                     <div className="onehour-rain-wind">
                         <div className="onehour-rain">
-                            <img src="icons/rain.png" />
+                            <img src="icons/rain.png" alt="Cloud with rain falling down from it." />
                             <div>{~~(hour.pop + 0.5) + '\u00B0'}</div>
                         </div>
                         <div className="onehour-wind">
