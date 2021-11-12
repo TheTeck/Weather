@@ -3,7 +3,7 @@ import React from 'react';
 import './WeekWeather.scss';
 import DaySummary from '../DaySummary/DaySummary';
 
-export default function WeekWeather ({ name, days, isDay, timeOffset }) {
+export default function WeekWeather ({ name, days, timeOffset }) {
     return (
         <div id="weekweather-container">
             <div id="weekweather-header">
@@ -12,7 +12,7 @@ export default function WeekWeather ({ name, days, isDay, timeOffset }) {
             <div id="weekweather-days">
                 {
                     days.slice(0, 7).map((day, index) => {
-                        return <DaySummary day={day} timeOffset={timeOffset} isDay={isDay} index={index} />
+                        return <DaySummary day={day} timeOffset={timeOffset} index={index} />
                     })
                 }
             </div>

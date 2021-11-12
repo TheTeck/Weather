@@ -5,7 +5,7 @@ import DynamicIcon from '../DynamicIcon/DynamicIcon';
 import Conversion from '../../utils/conversion';
 import DayExtra from '../DayExtra/DayExtra';
 
-export default function DaySummary ({ day, timeOffset, isDay, index }) {
+export default function DaySummary ({ day, timeOffset, index }) {
 
     const [expanded, setExpanded] = useState(!index);
 
@@ -79,7 +79,7 @@ export default function DaySummary ({ day, timeOffset, isDay, index }) {
                     </div>
 
                     <div className="daysummary-weather">
-                        <DynamicIcon width={60} height={60} weather={day.weather[0].main} day={isDay} />
+                        <DynamicIcon width={60} height={60} weather={day.weather[0].main} day={true} />
                         <div>{Conversion.capitalizeAllWords(day.weather[0].description)}</div>
                     </div>
 
