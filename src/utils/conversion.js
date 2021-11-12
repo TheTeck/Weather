@@ -74,7 +74,7 @@ function moonPhase (phase) {
 }
 
 function dateToTime (date) {
-    let hour = date.getHours() % 12; 
+    let hour = date.getHours() % 12 ? date.getHours() % 12: 12; 
     let minute = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
 
     return hour + ':' + minute
