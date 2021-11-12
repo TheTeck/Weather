@@ -15,7 +15,7 @@ function getSevenDay(lat, lon) {
 }
   
   
-export default {
+module.exports = {
     getCurrent,
     getSevenDay
 };

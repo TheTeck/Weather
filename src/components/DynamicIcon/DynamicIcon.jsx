@@ -29,13 +29,16 @@ export default function DynamicIcon ({ width, height, weather, day}) {
         output = "atmosphere";
     }
 
+    let alt = `Some ${weather} weather`;
+
     return (
         <img 
             src={`icons/${output}.png`}
-                style={{
-                    width: `${width}px`,
-                    height: `${height}px`
-                }}
+            style={{
+                width: `${width}px`,
+                height: `${height}px`
+            }}
+            alt={alt}
             />
     )
 }

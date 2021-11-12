@@ -86,7 +86,7 @@ export default function DaySummary ({ day, timeOffset, index }) {
                     <div className="daysummary-rightside">
                         <div className="daysummary-rain-wind">
                             <div className="daysummary-rain">
-                                <img src="icons/rain.png" />
+                                <img src="icons/rain.png" alt="Cloud with rain falling down from it." />
                                 <div>{~~day.pop + '\u00B0'}</div>
                             </div>
                             <div className="daysummary-wind">
