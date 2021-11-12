@@ -16,23 +16,21 @@ let dummyWeekData = require('../../dummyWeek');
 
 function App() {
 
-  const [output, setOutput] = useState('nothing');
+  const [zipError, setZipError] = useState('');
   // Object returned by Current Weather API
   const [currentData, setCurrentData] = useState(dummyData);
   // Oject returned by One Call API
   const [allData, setAllData] = useState(dummyWeekData);
   const [day, setDay] = useState(true);
   const [active, setActive] = useState('Today');
-
+  const [zip, setZip] = useState('94513');
 
   // Navigational options
   const PAGES = ["Today", "Hourly", "7 Day"];
-
-  let location = "94513"
   
   // Retrieve zipcode from search bar
-  function getZipcode (zip) {
-    console.log(zip);
+  function getZipcode (newZip) {
+    setZip(newZip);
   }
 
   // Retrieve the new active page name from nav button click
@@ -42,12 +40,18 @@ function App() {
 
   async function getCurrent () {
     try {
-      let data = await apiService.getCurrent(location);
+      let data = await apiService.getCurrent(zip);
       /////let data = dummyData;
-      setCurrentData(data);
+      if (data.cod === 200) {
+        setZipError('');
+        setCurrentData(data);
+      } else {
+        console.log(data.message)
+        setZipError(data.message);
+      }
 
-    } catch (error) {
-      console.log(error.message);
+    } catch (err) {
+      console.log(err);
     }
   }
 
@@ -56,17 +60,18 @@ function App() {
       let weekData = await apiService.getSevenDay(latitude, longitude);
       /////let weekData = dummyWeekData;
       setAllData(weekData);
-    } catch (error) {
-      console.log(error.message);
+    } catch (err) {
+      console.log(err.message);
     }
   }
 
   useEffect(() => {
     getCurrent();
-  }, [])
+  }, [zip])
 
   useEffect(() => {
     getWeek(currentData.coord.lat, currentData.coord.lon);
+    setDay(currentData.dt >= currentData.sys.sunrise && currentData.dt <= currentData.sys.sunset);
   }, [currentData])
 
   return (
@@ -78,6 +83,7 @@ function App() {
           temp={currentData.main.temp}
           weather={currentData.weather[0].main} 
           day={day} 
+          zipError={zipError}
         />
       </header>
 
