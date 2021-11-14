@@ -12,6 +12,7 @@
   font-weight: $font-mid-weight;
   font-family: $font-primary;
   color: $color-font-dark;
+  position: relative;
 }
 
 .icon-description {
@@ -33,4 +34,18 @@
   width: 64px;
   text-align: center;
   opacity: 0.8;
+}
+
+@media (max-width: $break-mobile) {
+  .todaysdetails-data {
+    padding: 0;
+  }
+  .details-mat-icon {
+    position: relative;
+    left: -7px;
+    width: 44px;
+  }
+  .todaysdetails-container {
+    font-size: $font-bity;
+  }
 }

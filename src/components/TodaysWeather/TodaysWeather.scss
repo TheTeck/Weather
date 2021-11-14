@@ -79,3 +79,16 @@
     padding: 0 $padding-small;
   }
 }
+
+@media (max-width: $break-mobile) {
+  #todaysweather-title,
+  #feels-like-temp {
+    font-size: $font-bity;
+  }
+  #actual-temp {
+    font-size: $font-large;
+  }
+  .todays-details {
+    padding: 0;
+  }
+}
