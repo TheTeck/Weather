@@ -54,10 +54,6 @@
   opacity: 0.8;
 }
 
-#huge-icon {
-  margin: 0;
-}
-
 #min-max-temp {
   margin: 0;
   font-size: $font-medium;
@@ -66,4 +62,24 @@
   text-align: center;
   position: relative;
   top: -10px;
+}
+
+// Mobile query
+@media (max-width: 500px) {
+  #currentweather-container {
+    height: 200px;
+  }
+
+  #current-location,
+  #current-description {
+    font-size: $font-bity;
+  }
+
+  #big-temp {
+    font-size: $font-large;
+  }
+
+  #min-max-temp {
+    font-size: $font-small;
+  }
 }

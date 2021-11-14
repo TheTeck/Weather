@@ -2,7 +2,7 @@ import React from 'react';
 
 import './DynamicIcon.scss';
 
-export default function DynamicIcon ({ width, height, weather, day}) {
+export default function DynamicIcon ({ width, height, weather, day, isMobile}) {
 
     let output = "sunny";
 
@@ -31,8 +31,11 @@ export default function DynamicIcon ({ width, height, weather, day}) {
 
     let alt = `Some ${weather} weather`;
 
+    let dynamicClass = `icon-ismobile-${isMobile}`;
+
     return (
         <img 
+            className={dynamicClass}
             src={`icons/${output}.png`}
             style={{
                 width: `${width}px`,
