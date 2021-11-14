@@ -1,3 +1,16 @@
 img {
   filter: drop-shadow(0 0 60px white);
 }
+
+.icon-ismobile-true {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .icon-ismobile-true {
+    display: block;
+  }
+  .icon-ismobile-false {
+    display: none;
+  }
+}

@@ -24,6 +24,22 @@
   font-weight: $font-heavy-weight;
 }
 
+// Mobile query
+@media (max-width: 500px) {
+  #app-title {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  #mainheader-container {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: $padding-small;
+    height: 100%;
+  }
+}
+
 @media (min-width: $break-mid) {
   #mainheader-container {
     justify-content: center;

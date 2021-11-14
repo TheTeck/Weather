@@ -48,3 +48,18 @@
     font-size: $font-small;
   }
 }
+
+@media (max-width: $break-mobile) {
+  .quarterday-temp {
+    font-size: $font-medium;
+  }
+  .quarterday-title {
+    font-size: $font-micro;
+  }
+  .quarterday-precipitation p {
+    font-size: $font-tiny;
+  }
+  .quarterdayforecast-container {
+    margin-top: $padding-small;
+  }
+}

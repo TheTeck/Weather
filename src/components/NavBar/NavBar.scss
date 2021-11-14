@@ -16,3 +16,10 @@ nav {
     column-gap: 200px;
   }
 }
+
+// Mobile query
+@media (max-width: 500px) {
+  nav {
+    column-gap: 5px;
+  }
+}

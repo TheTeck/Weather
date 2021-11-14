@@ -38,3 +38,14 @@
   height: 100%;
   background: linear-gradient($color-muted-white, grey, $color-muted-white);
 }
+
+// Mobile query
+@media (max-width: 500px) {
+  #todayforecast-title {
+    font-size: $font-bity;
+  }
+  #todayforecast-container {
+    padding: $padding-small $padding-small 0 $padding-small;
+    height: 250px;
+  }
+}
