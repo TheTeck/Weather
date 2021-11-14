@@ -24,3 +24,12 @@
     width: 25%;
   }
 }
+
+@media (max-width: $break-mobile) {
+  .extra-icon {
+    margin-right: $padding-tiny;
+  }
+  .extra-data {
+    font-size: $font-tiny;
+  }
+}

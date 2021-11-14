@@ -26,7 +26,8 @@ export default function OneHour ({ hour, timeOffset, day }) {
                 </div>
 
                 <div className="onehour-weather">
-                    <DynamicIcon width={60} height={60} weather={hour.weather[0].main} day={day} />
+                    <DynamicIcon width={60} height={60} weather={hour.weather[0].main} day={day} isMobile={false} />
+                    <DynamicIcon width={40} height={40} weather={hour.weather[0].main} day={day} isMobile={true} />
                     <div>{Conversion.capitalizeAllWords(hour.weather[0].description)}</div>
                 </div>
 

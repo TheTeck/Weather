@@ -41,3 +41,22 @@
   font-weight: $font-heavy-weight;
   opacity: 0.8;
 }
+
+@media (max-width: $break-mobile) {
+  #hourly-header {
+    padding: $padding-small;
+  }
+  #hourly-title {
+    font-size: $font-bity;
+
+    span {
+      font-size: $font-small;
+    }
+  }
+  #hourly-date {
+    font-size: $font-bity;
+  }
+  #hours-container {
+    padding: 0 $padding-tiny $padding-tiny $padding-tiny;
+  }
+}

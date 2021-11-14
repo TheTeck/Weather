@@ -149,3 +149,34 @@
     width: 0;
   }
 }
+
+@media (max-width: $break-mobile) {
+  .onehour-container {
+    padding: 0;
+  }
+
+  .onehour-more {
+    font-size: $font-medium;
+  }
+
+  .onehour-rain {
+    width: 50px;
+  }
+
+  .onehour-temp {
+    width: 30px;
+  }
+
+  .onehour-rain img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .onehour-extended-title {
+    font-size: $font-bity;
+  }
+
+  .extended-container {
+    padding: 0 $padding-tiny $padding-tiny $padding-tiny;
+  }
+}
