@@ -24,8 +24,7 @@
   font-weight: $font-heavy-weight;
 }
 
-// Mobile query
-@media (max-width: 500px) {
+@media (max-width: $break-mobile) {
   #app-title {
     position: relative;
     top: 0;

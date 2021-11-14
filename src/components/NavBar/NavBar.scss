@@ -17,8 +17,7 @@ nav {
   }
 }
 
-// Mobile query
-@media (max-width: 500px) {
+@media (max-width: $break-mobile) {
   nav {
     column-gap: 5px;
   }

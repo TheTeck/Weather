@@ -1,3 +1,5 @@
+@import "../../sass/dimensions";
+
 img {
   filter: drop-shadow(0 0 60px white);
 }
@@ -6,7 +8,7 @@ img {
   display: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: $break-mobile) {
   .icon-ismobile-true {
     display: block;
   }

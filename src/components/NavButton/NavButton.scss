@@ -30,8 +30,7 @@
   border-bottom: 2px solid $color-font-light;
 }
 
-// Mobile query
-@media (max-width: 500px) {
+@media (max-width: $break-mobile) {
   .nav-button-container {
     font-size: $font-bity;
   }
