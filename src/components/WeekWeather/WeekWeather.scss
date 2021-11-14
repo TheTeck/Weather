@@ -36,3 +36,17 @@
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
 }
+
+@media (max-width: $break-mobile) {
+  #weekweather-header {
+    padding: $padding-small;
+
+    p {
+      font-size: $font-bity;
+
+      span {
+        font-size: $font-small;
+      }
+    }
+  }
+}
