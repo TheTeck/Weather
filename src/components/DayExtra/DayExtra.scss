@@ -115,3 +115,22 @@
     height: 30px;
   }
 }
+
+@media (max-width: $break-mobile) {
+  .dayextra-header {
+    font-size: $font-bity;
+  }
+
+  .extra-big-temp {
+    font-size: $font-large;
+  }
+
+  .dayextra-container {
+    padding: $padding-small 0;
+  }
+  .wind-or-rain {
+    .icon-text {
+      font-size: $font-tiny;
+    }
+  }
+}

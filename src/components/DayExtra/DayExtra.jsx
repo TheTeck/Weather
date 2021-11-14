@@ -12,7 +12,8 @@ export default function DayExtra ({ data }) {
             </div>
             <div className="extra-main-content">
                 <div className="extra-big-temp">{~~data.temp + '\u00B0'}</div>
-                <DynamicIcon width={60} height={60} weather={data.main} day={data.title === 'Day'} />
+                <DynamicIcon width={60} height={60} weather={data.main} day={data.title === 'Day'} isMobile={false} />
+                <DynamicIcon width={40} height={40} weather={data.main} day={data.title === 'Day'} isMobile={true} />
                 <div className="extra-wind-rain">
                     <div className="wind-or-rain">
                         <img src="icons/rain.png" alt="Cloud with rain falling down from it." />

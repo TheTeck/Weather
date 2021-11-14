@@ -79,7 +79,8 @@ export default function DaySummary ({ day, timeOffset, index }) {
                     </div>
 
                     <div className="daysummary-weather">
-                        <DynamicIcon width={60} height={60} weather={day.weather[0].main} day={true} />
+                        <DynamicIcon width={60} height={60} weather={day.weather[0].main} day={true} isMobile={false} />
+                        <DynamicIcon width={40} height={40} weather={day.weather[0].main} day={true} isMobile={true} />
                         <div>{Conversion.capitalizeAllWords(day.weather[0].description)}</div>
                     </div>
 

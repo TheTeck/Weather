@@ -144,3 +144,40 @@
     justify-content: space-evenly;
   }
 }
+
+@media (max-width: 450px) {
+  .daysummary-date {
+    width: 60px;
+  }
+  .daysummary-temp {
+    font-size: $font-bity;
+    width: 65px;
+    margin-left: 5px;
+  }
+  .daysummary-main-container {
+    padding: 0;
+  }
+
+  .daysummary-leftside,
+  .daysummary-rightside {
+    column-gap: 0;
+  }
+
+  .daysummary-rain img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .daysummary-more,
+  .daysummary-less {
+    font-size: $font-medium;
+  }
+
+  .daysummary-rain div {
+    width: 20px;
+  }
+
+  .extra-wrapper {
+    padding: 0;
+  }
+}
