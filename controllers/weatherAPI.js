@@ -11,7 +11,7 @@ module.exports = {
 // Return the object from the API call with the zipcode provided as parameter
 function getCurrent (req, res) {
 
-    let zipcode = '90210';
+    let zipcode = '94513';
 
     if (req.params.id === 'local') {
         request({
@@ -24,6 +24,8 @@ function getCurrent (req, res) {
                     zipcode = body.postal;
                     getTheWeather(zipcode, res); 
                     
+                } else {
+                    getTheWeather(zipcode, res);
                 }
             }
         );
