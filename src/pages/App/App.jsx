@@ -13,16 +13,13 @@ import HourlyData from '../../components/HourlyData/HourlyData';
 import WeekWeather from '../../components/WeekWeather/WeekWeather';
 import Loading from '../../components/Loading/Loading';
 
-let dummyData = require('../../dummyCurrent');
-let dummyWeekData = require('../../dummyWeek');
-
 function App() {
 
   const [zipError, setZipError] = useState('');
   // Object returned by Current Weather API
-  const [currentData, setCurrentData] = useState(dummyData);
+  const [currentData, setCurrentData] = useState(null);
   // Oject returned by One Call API
-  const [allData, setAllData] = useState(dummyWeekData);
+  const [allData, setAllData] = useState(null);
   const [day, setDay] = useState(true);
   const [active, setActive] = useState('Today');
   const [zip, setZip] = useState('local');
@@ -45,11 +42,9 @@ function App() {
     try {
       setIsLoading(true);
       let data = await apiService.getCurrent(zip);
-      /////let data = dummyData;
       if (data.cod === 200) {
         setZipError('');
         setCurrentData(data);
-        setIsLoading(false);
       } else {
         setZipError(data.message);
         setIsLoading(false);
@@ -63,10 +58,11 @@ function App() {
   async function getWeek (latitude, longitude) {
     try {
       let weekData = await apiService.getSevenDay(latitude, longitude);
-      /////let weekData = dummyWeekData;
       setAllData(weekData);
+      setIsLoading(false);
     } catch (err) {
       console.log(err.message);
+      setIsLoading(false);
     }
   }
 
@@ -75,8 +71,10 @@ function App() {
   }, [zip])
 
   useEffect(() => {
-    getWeek(currentData.coord.lat, currentData.coord.lon);
-    setDay(currentData.dt >= currentData.sys.sunrise && currentData.dt <= currentData.sys.sunset);
+    if (currentData) {
+      getWeek(currentData.coord.lat, currentData.coord.lon);
+      setDay(currentData.dt >= currentData.sys.sunrise && currentData.dt <= currentData.sys.sunset);
+    }
   }, [currentData])
 
   return (
@@ -85,9 +83,9 @@ function App() {
       <header>
         <MainHeader getZipcode={getZipcode} />
         <SubHeader 
-          name={currentData.name} 
-          temp={currentData.main.temp}
-          weather={currentData.weather[0].main} 
+          name={currentData ? currentData.name : null} 
+          temp={currentData ? currentData.main.temp: null}
+          weather={currentData ? currentData.weather[0].main : null} 
           day={day} 
           zipError={zipError}
         />
@@ -97,8 +95,9 @@ function App() {
 
       <div id="content-container">
         {
-          active === 'Today' ?
+          active === 'Today' && currentData && allData ?
             <>
+
               <CurrentWeather 
                   weather={currentData.weather[0]} 
                   main={currentData.main} 
@@ -123,18 +122,18 @@ function App() {
                 timezoneOffset={allData.timezone_offset} 
               />
             </>
-          : active === 'Hourly' ?
+          : active === 'Hourly' && currentData && allData ?
             <HourlyData 
               name={currentData.name} 
               data={allData.current} 
               timezoneOffset={allData.timezone_offset}
               hours={allData.hourly}
             />
-          : <WeekWeather 
+          : currentData && allData ? <WeekWeather 
             name={currentData.name} 
             days={allData.daily} 
             timeOffset={allData.timezone_offset}
-          />
+          /> : ''
         }
       </div>
     </div>
