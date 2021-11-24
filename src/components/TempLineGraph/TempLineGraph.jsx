@@ -8,7 +8,7 @@ export default function TempLineGraph ({ hourly, timeOffset }) {
     const svgRef = useRef();
     const w = 1000;
     const h = 130;
-    let data = hourly.map(hour => hour.temp).slice(0, 24);
+    let data = hourly.map(hour => hour.temp).slice(0, 25);
     let max = data.reduce((acc, d) => {
         return d > acc ? d : acc;
     }, data[0]);
@@ -33,7 +33,7 @@ export default function TempLineGraph ({ hourly, timeOffset }) {
             .style('overflow', 'visible')
 
         const xScale = d3.scaleLinear()
-            .domain([0, data.length])
+            .domain([0, data.length - 1])
             .range([0, w])
         
         const yScale = d3.scaleLinear()
@@ -56,16 +56,19 @@ export default function TempLineGraph ({ hourly, timeOffset }) {
         const xAxis = d3.axisBottom(xScale)
             .ticks(data.length)
             .tickFormat(i => i % 2 ? getHour(i) : '')
+            
         
         const yAxis = d3.axisLeft(yScale)
             .ticks(5)
             .tickFormat(d => d + '\u00B0')
         
         svg.append('g')
+            .style('font-size', '16px')
             .call(xAxis)
             .attr('transform', `translate(0, ${h})`)
     
         svg.append('g')
+            .style('font-size', '16px')
             .call(yAxis)
     }, [data])
 
