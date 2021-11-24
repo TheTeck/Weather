@@ -1,0 +1,19 @@
+@import "../../sass/colors";
+@import "../../sass/fonts";
+@import "../../sass/dimensions";
+
+#templinegraph-container {
+  width: 100%;
+  max-width: $break-mid;
+  height: 200px;
+  margin: $padding-small auto 0 auto;
+  padding: $padding-content;
+  border-radius: $radius;
+  overflow: hidden;
+  background-color: $color-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-font-light;
+  font-family: $font-primary;
+}
