@@ -7,6 +7,7 @@ import SubHeader from '../../components/SubHeader/SubHeader';
 import NavBar from '../../components/NavBar/NavBar';
 import CurrentWeather from '../../components/CurrentWeather/CurrentWeather';
 import TodayForecast from '../../components/TodayForecast/TodayForecast';
+import TempLineGraph from '../../components/TempLineGraph/TempLineGraph';
 import TodaysWeather from '../../components/TodaysWeather/TodaysWeather';
 import HourlyData from '../../components/HourlyData/HourlyData';
 import WeekWeather from '../../components/WeekWeather/WeekWeather';
@@ -111,6 +112,7 @@ function App() {
                 timezoneOffset={allData.timezone_offset}
                 temps={allData.daily[0].temp} 
               />
+              <TempLineGraph />
               <TodaysWeather 
                 name={currentData.name} 
                 weather={allData.current} 
