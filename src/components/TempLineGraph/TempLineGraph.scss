@@ -7,13 +7,13 @@
   max-width: $break-mid;
   height: 200px;
   margin: $padding-small auto 0 auto;
-  padding: $padding-content;
+  padding-left: $padding-graph;
   border-radius: $radius;
-  overflow: hidden;
-  background-color: $color-secondary;
+  overflow: scroll;
+  background-color: $color-translucent;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   color: $color-font-light;
   font-family: $font-primary;
 }
