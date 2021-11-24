@@ -5,15 +5,37 @@
 #templinegraph-container {
   width: 100%;
   max-width: $break-mid;
-  height: 200px;
+  height: 250px;
   margin: $padding-small auto 0 auto;
-  padding-left: $padding-graph;
   border-radius: $radius;
-  overflow: scroll;
   background-color: $color-translucent;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   color: $color-font-light;
   font-family: $font-primary;
+}
+
+#svg-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  padding-left: $padding-graph;
+}
+
+#linegraph-header {
+  margin: 0;
+  font-size: $font-bity;
+  font-weight: $font-mid-weight;
+  opacity: 0.8;
+  width: 100%;
+  text-align: left;
+  padding: $padding-small;
+}
+
+@media (min-width: $break-small) {
+  #linegraph-header {
+    font-size: $font-small;
+  }
 }
