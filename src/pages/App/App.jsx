@@ -112,7 +112,7 @@ function App() {
                 timezoneOffset={allData.timezone_offset}
                 temps={allData.daily[0].temp} 
               />
-              <TempLineGraph />
+              <TempLineGraph hourly={allData.hourly} />
               <TodaysWeather 
                 name={currentData.name} 
                 weather={allData.current} 
