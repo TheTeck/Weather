@@ -17,8 +17,10 @@ export default function TempLineGraph ({ hourly, timeOffset }) {
     }, data[0]);
 
     const getHour = i => {
-        const hourDate = new Date((hourly[i].dt + timeOffset +(new Date().getTimezoneOffset() * 60)) * 1000);
-        return hourDate
+        const hourTime = new Date((hourly[i].dt + timeOffset +(new Date().getTimezoneOffset() * 60)) * 1000);
+        let hourTimeHour = hourTime.getHours() % 12 ? hourTime.getHours() % 12 : 12;
+        let antePost = hourTime.getHours() < 12 ? 'am' : 'pm'
+        return hourTimeHour + antePost;
     }
 
     useEffect(() => {
@@ -49,7 +51,7 @@ export default function TempLineGraph ({ hourly, timeOffset }) {
               .attr('d', d => generateScaledLine(d))
               .attr('fill', 'none')
               .attr('stroke', 'orange')
-              .attr('stroke-width', 5)
+              .attr('stroke-width', 4)
         
         const xAxis = d3.axisBottom(xScale)
             .ticks(data.length)
