@@ -1,7 +1,6 @@
 const request = require('request');
 
 const apiKey = process.env.WEATHER_KEY;
-const geoKey = process.env.GEOLOCATION_KEY
 
 module.exports = {
     getCurrent,
@@ -9,36 +8,11 @@ module.exports = {
 };
 
 // Return the object from the API call with the zipcode provided as parameter
-function getCurrent (req, res) {
-
-    let zipcode = '94513';
-
-    if (req.params.id === 'local') {
-        request({
-                url: `https://geolocation-db.com/json/${geoKey}`,
-                json: true
-            },
-            function (error, response, body) {
-                
-                if (!error && response.statusCode === 200) {
-                    zipcode = body.postal;
-                    getTheWeather(zipcode, res); 
-                    
-                } else {
-                    getTheWeather(zipcode, res);
-                }
-            }
-        );
-    } else {
-        getTheWeather(req.params.id, res);
-    }
-
+async function getCurrent (req, res) {    
+    const zipcode = req.params.id === 'local' ? '94513' : req.params.id;
     
-}
-
-function getTheWeather (zip, res) {
     request(
-        `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${apiKey}&units=imperial`,
+        `https://api.openweathermap.org/data/2.5/weather?zip=${zipcode}&appid=${apiKey}&units=imperial`,
         function(err, response, body) {
             
             if (err) {
