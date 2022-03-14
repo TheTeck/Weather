@@ -5,7 +5,7 @@ import DaySummary from '../DaySummary/DaySummary';
 
 export default function WeekWeather ({ name, days, timeOffset }) {
     return (
-        <div id="weekweather-container">
+        <section id="weekweather-container">
             <div id="weekweather-header">
                 <p><span>7 Day Weather</span> - {name}</p>
             </div>
@@ -16,6 +16,6 @@ export default function WeekWeather ({ name, days, timeOffset }) {
                     })
                 }
             </div>
-        </div>
+        </section>
     )
 }

@@ -93,7 +93,7 @@ function App() {
 
       <NavBar pages={PAGES} active={active} getActivePage={getActivePage} />
 
-      <div id="content-container">
+      <main id="content-container">
         {
           active === 'Today' && currentData && allData ?
             <>
@@ -129,13 +129,14 @@ function App() {
               timezoneOffset={allData.timezone_offset}
               hours={allData.hourly}
             />
-          : currentData && allData ? <WeekWeather 
-            name={currentData.name} 
-            days={allData.daily} 
-            timeOffset={allData.timezone_offset}
-          /> : ''
+          : currentData && allData ? 
+            <WeekWeather 
+              name={currentData.name} 
+              days={allData.daily} 
+              timeOffset={allData.timezone_offset}
+            /> : ''
         }
-      </div>
+      </main>
     </div>
   );
 }

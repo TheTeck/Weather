@@ -13,7 +13,7 @@ export default function HourlyData ({ name, data, timezoneOffset, hours }) {
     const MONTHS = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     
     return (
-        <div id="hourlydata-container">
+        <section id="hourlydata-container">
             <div id="hourly-header">
                 <p id="hourly-title"><span>Hourly Weather</span> - {name}</p>
                 <p id="hourly-date">{`${DAYS[today.getDay()]}, ${MONTHS[today.getMonth()]} ${today.getDate()}`}</p>
@@ -28,6 +28,6 @@ export default function HourlyData ({ name, data, timezoneOffset, hours }) {
                     })
                 }
             </div>
-        </div>
+        </section>
     )
 }
