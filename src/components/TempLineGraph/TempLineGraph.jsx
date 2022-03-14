@@ -73,11 +73,11 @@ export default function TempLineGraph ({ hourly, timeOffset }) {
     }, [data])
 
     return (
-        <div id="templinegraph-container">
+        <section id="templinegraph-container">
             <p id="linegraph-header">24-Hour Temperatures</p>
             <div id="svg-wrapper">
                 <svg ref={svgRef}></svg>
             </div>
-        </div>
+        </section>
     )
 }

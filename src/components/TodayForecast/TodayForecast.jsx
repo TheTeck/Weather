@@ -16,7 +16,7 @@ export default function TodayForecast ({ name, hourly, currentTime, timezoneOffs
     }
 
     return (
-        <div id="todayforecast-container">
+        <section id="todayforecast-container">
             <p id="todayforecast-title">{`Today's Forecast for ${name}`}</p>
             <div id="quarterday-container">
                 <QuarterDayForecast title="Morning" hour={thisHour > 11 ? PAST : hourly[11-thisHour]} day={true} temp={temps.morn} />
@@ -27,6 +27,6 @@ export default function TodayForecast ({ name, hourly, currentTime, timezoneOffs
                 <div className="divider"></div>
                 <QuarterDayForecast title="Overnight" hour={hourly[29-thisHour]} day={false} temp={temps.night} />
             </div>
-        </div>
+        </section>
     )
 }

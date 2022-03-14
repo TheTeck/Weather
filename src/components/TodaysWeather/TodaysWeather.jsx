@@ -12,7 +12,7 @@ export default function TodaysWeather ({ name, weather, temp, timezoneOffset }) 
     
 
     return (
-        <div id="todaysweather-container">
+        <section id="todaysweather-container">
             <p id="todaysweather-title">Weather Today in {name}</p>
             <div className="split-left-right">
                 <div id="todays-temp">
@@ -67,6 +67,6 @@ export default function TodaysWeather ({ name, weather, temp, timezoneOffset }) 
                     />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
